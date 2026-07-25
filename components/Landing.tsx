@@ -13,7 +13,6 @@ import { Reveal } from "./Reveal";
 import { WhatsApp } from "./WhatsApp";
 import { modalities, site } from "@/lib/site";
 
-const instagramPhotos = modalities.slice(0, 3);
 const reviewImages = [
   {
     src: "/avaliacao-moby-2.png",
@@ -169,48 +168,33 @@ export function Landing() {
         </section>
 
         <section id="instagram" className="section">
-          <div className="container-site">
-            <Reveal className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-              <div>
-                <p className="eyebrow">Acompanhe a Moby</p>
-                <h2 className="display mt-3 text-5xl md:text-7xl">A rotina da academia, de perto.</h2>
-              </div>
-              <a
-                href={site.instagramUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-blue self-start"
-                aria-label={`Abrir o Instagram ${site.instagram}`}
-              >
-                <Instagram size={18} />
-                {site.instagram}
-              </a>
-            </Reveal>
-            <div className="grid gap-3 sm:grid-cols-3">
-              {instagramPhotos.map((photo) => (
+          <Reveal className="container-site">
+            <div className="relative overflow-hidden bg-deep px-6 py-12 text-white md:px-12 md:py-16">
+              <div className="lane-lines absolute inset-0 opacity-50" />
+              <div className="relative grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+                <div>
+                  <p className="eyebrow !text-[#55B7FF]">Acompanhe a Moby</p>
+                  <h2 className="display mt-3 max-w-4xl text-5xl leading-none md:text-7xl">
+                    Novidades, treinos e a rotina da academia.
+                  </h2>
+                  <p className="mt-5 max-w-2xl text-sm leading-6 text-white/65">
+                    Siga a Moby Fitness no Instagram e acompanhe de perto as aulas,
+                    modalidades, horários especiais e novidades das unidades.
+                  </p>
+                </div>
                 <a
-                  key={photo.name}
                   href={site.instagramUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="group relative min-h-[420px] overflow-hidden bg-deep"
-                  aria-label={`Ver ${photo.name} no Instagram da Moby Fitness`}
+                  className="btn btn-white self-start whitespace-nowrap md:self-center"
+                  aria-label={`Seguir a Moby Fitness no Instagram ${site.instagram}`}
                 >
-                  <Image
-                    src={photo.image}
-                    alt={`Publicação da Moby Fitness sobre ${photo.name}`}
-                    fill
-                    loading="lazy"
-                    sizes="(max-width:640px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
-                  />
-                  <span className="absolute bottom-4 right-4 grid h-11 w-11 place-items-center bg-white text-blue">
-                    <Instagram size={20} />
-                  </span>
+                  <Instagram size={19} className="text-blue" />
+                  Seguir {site.instagram}
                 </a>
-              ))}
+              </div>
             </div>
-          </div>
+          </Reveal>
         </section>
 
         <section id="avaliacoes" className="section bg-deep text-white">
