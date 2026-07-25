@@ -3,9 +3,23 @@ export const site = {
   whatsappDisplay: "(13) 99656-3020",
   whatsappDigits: "5513996563020",
   instagram: "@mobyfitness_academia",
-  instagramUrl: "https://www.instagram.com/mobyfitness_academia/",
+  instagramUrl: "https://www.instagram.com/mobyfitness_academia?igshid=MzRlODBiNWFlZA%3D%3D",
   facebookUrl: "https://www.facebook.com/mobyfitness",
-  city: "[CIDADE / ENDEREÇO A CONFIRMAR]"
+  addresses: [
+    {
+      name: "Unidade Centro",
+      address: "Rua Buenos Aires, 107 — Vila Maia, Guarujá"
+    },
+    {
+      name: "Unidade Vicente de Carvalho",
+      address: "Rua Monteiro Lobato, 365 — Vicente de Carvalho, Guarujá"
+    }
+  ],
+  hours: [
+    ["Segunda a sexta", "06:00–22:00"],
+    ["Sábado", "08:00–12:00"],
+    ["Domingo", "Fechado"]
+  ]
 };
 
 export function whatsappUrl(subject?: string) {
@@ -17,50 +31,34 @@ export function whatsappUrl(subject?: string) {
 export const modalities = [
   {
     name: "Musculação",
-    description: "Estrutura e acompanhamento para treinar no seu ritmo.",
-    image: "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    description: "Treinos para cuidar da saúde, ganhar força e evoluir no seu ritmo.",
+    image: "/731022954_18445064254187774_3322276301743420675_n.jpg"
   },
   {
     name: "Natação",
-    description: "Movimento, aprendizado e confiança dentro d’água.",
-    image: "https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    description: "Aprendizado, confiança e movimento dentro d’água para diferentes idades.",
+    image: "/747346300_18446959477187774_255519686253795559_n.jpg"
   },
   {
     name: "Jiu-jítsu",
-    description: "Técnica, estratégia, disciplina e evolução.",
-    image: "https://images.pexels.com/photos/7045717/pexels-photo-7045717.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    description: "Estratégia, controle, técnica e evolução em cada treino.",
+    image: "/729879946_18443125837187774_2135662775346322723_n.jpg"
   },
   {
     name: "Karatê",
-    description: "Foco, respeito e desenvolvimento em cada aula.",
-    image: "https://images.pexels.com/photos/6253307/pexels-photo-6253307.jpeg?auto=compress&cs=tinysrgb&w=1200"
-  },
-  {
-    name: "Balé",
-    description: "Expressão, equilíbrio e coordenação com leveza.",
-    image: "https://images.pexels.com/photos/358010/pexels-photo-358010.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    description: "Disciplina, respeito, foco e desenvolvimento dentro e fora do tatame.",
+    image: "/unnamed.webp"
   }
 ];
 
 export const reviews = [
   {
-    name: "Claytone Cilene Silva",
-    text: "Eu recomendo a Moby para todos que conheço. Meu filho faz natação, vem tendo um bom desempenho e tem melhorado muito na parte respiratória. Professores super profissionais e atenciosos."
+    text: "Ótimos professores ambiente tranquilo muito bom parabéns a todos o funcionários"
   },
   {
-    name: "Claudice Cruz",
-    text: "Hidroginástica muito boa, com ótima companhia."
+    text: "Ótimos profissionais, ensino inclusivo, ótima tratamento da água !"
   },
   {
-    name: "Bia Silva",
-    text: "Ótimo preço e profissionais atenciosos."
-  },
-  {
-    name: "Regina Gonçalves",
-    text: "Muito bom! Recomendo."
-  },
-  {
-    name: "Ines Lopes",
-    text: "Gostei dos exercícios e do professor. O preço é acessível, fiz uma aula experimental e vou me matricular."
+    text: "Excelente lugar para adultos e crianças praticar esportes"
   }
 ];

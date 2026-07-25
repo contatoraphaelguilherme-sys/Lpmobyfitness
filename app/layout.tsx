@@ -6,11 +6,11 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", displa
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Moby Fitness | Academia, natação e artes marciais",
-  description: "Musculação, natação, karatê, jiu-jítsu e balé em um espaço para toda a família. Fale com a Moby Fitness pelo WhatsApp.",
+  title: "Moby Fitness | Academia, natação e artes marciais em Guarujá",
+  description: "Musculação, natação, karatê e jiu-jítsu em duas unidades no Guarujá. Espaço para toda a família e TotalPass TP+. Fale pelo WhatsApp.",
   openGraph: {
     title: "Moby Fitness — Seu ritmo. Sua evolução.",
-    description: "Um espaço para cuidar da saúde, treinar e evoluir.",
+    description: "Musculação, natação e artes marciais em um espaço para toda a família.",
     type: "website",
     locale: "pt_BR"
   }
