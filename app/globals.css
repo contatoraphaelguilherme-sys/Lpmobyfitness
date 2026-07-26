@@ -4,19 +4,22 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body { margin: 0; background: #fff; color: #111820; font-family: var(--font-manrope), sans-serif; overflow-x: hidden; }
+body { margin: 0; background: #fbfaf7; color: #111820; font-family: var(--font-manrope), sans-serif; overflow-x: hidden; }
 ::selection { background: #087BEA; color: #fff; }
 .container-site { width: min(100% - 32px, 1220px); margin-inline: auto; }
-.display { font-family: var(--font-oswald), sans-serif; text-transform: uppercase; letter-spacing: -.035em; }
+.display { font-family: var(--font-oswald), sans-serif; text-transform: uppercase; letter-spacing: -.045em; }
 .eyebrow { color: #087BEA; font-size: 11px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
 .section { padding-block: 80px; }
-.btn { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 20px; font-size: 13px; font-weight: 800; transition: transform .2s ease, background .2s ease; }
+.btn { min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 22px; font-size: 12px; font-weight: 800; letter-spacing: .02em; transition: transform .25s ease, background .25s ease, box-shadow .25s ease; }
 .btn:hover { transform: translateY(-2px); }
-.btn-blue { background: #087BEA; color: white; }
-.btn-blue:hover { background: #0667C4; }
+.btn-blue { background: #087BEA; color: white; box-shadow: 0 10px 26px rgba(8,123,234,.22); }
+.btn-blue:hover { background: #0667C4; box-shadow: 0 14px 32px rgba(8,123,234,.3); }
 .btn-white { background: white; color: #071D38; }
 a:focus-visible, button:focus-visible { outline: 3px solid #087BEA; outline-offset: 3px; }
 .lane-lines { background-image: linear-gradient(90deg, transparent 0 24%, rgba(255,255,255,.09) 24% 24.25%, transparent 24.25% 49%, rgba(255,255,255,.09) 49% 49.25%, transparent 49.25% 74%, rgba(255,255,255,.09) 74% 74.25%, transparent 74.25%); }
+.blueprint-grid { background-image: linear-gradient(rgba(8,123,234,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(8,123,234,.08) 1px, transparent 1px); background-size: 34px 34px; }
+.outline-title { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.35); }
+.sport-rule { height: 1px; background: linear-gradient(90deg, #087BEA 0 64px, #DCE7EE 64px 100%); }
 @media (max-width: 767px) {
   body { padding-bottom: 68px; }
   .container-site { width: min(100% - 24px, 1220px); }

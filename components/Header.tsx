@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { WhatsApp } from "./WhatsApp";
@@ -9,8 +9,17 @@ const links = [["Modalidades", "#modalidades"], ["A Moby", "#estrutura"], ["Inst
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [compact, setCompact] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setCompact(window.scrollY > 32);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-white/95 py-1 backdrop-blur-sm">
+    <header className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${compact ? "border-line bg-white/95 py-0 shadow-[0_8px_30px_rgba(7,29,56,.08)] backdrop-blur-md" : "border-transparent bg-white py-1"}`}>
       <div className="container-site flex items-center justify-between gap-5">
         <Logo />
         <nav className="hidden items-center gap-5 xl:flex" aria-label="Navegação principal">
