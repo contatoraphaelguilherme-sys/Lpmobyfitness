@@ -14,7 +14,7 @@ export function HeroScene() {
   return (
     <div ref={ref} className="relative min-h-[510px] lg:min-h-[620px]">
       <motion.div
-        initial={reduced ? false : { opacity: 0, clipPath: "inset(0 0 100% 0)" }}
+        initial={false}
         animate={reduced ? undefined : { opacity: 1, clipPath: "inset(0 0 0% 0)" }}
         transition={{ duration: 0.75, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
         className="absolute inset-x-0 top-0 h-[86%] overflow-hidden bg-[#0b2d53]"
@@ -34,7 +34,7 @@ export function HeroScene() {
 
       <motion.div
         style={{ y: detailY }}
-        initial={reduced ? false : { opacity: 0, x: 18 }}
+        initial={false}
         animate={reduced ? undefined : { opacity: 1, x: 0 }}
         transition={{ duration: 0.55, delay: 0.48 }}
         className="absolute bottom-0 right-0 w-[76%] border-l-[6px] border-[#1b8ef2] bg-[#f6fbff] p-5 text-[#071d38] shadow-[0_22px_60px_rgba(0,0,0,.18)] sm:w-[62%] md:p-7"
@@ -46,7 +46,7 @@ export function HeroScene() {
       </motion.div>
 
       <motion.div
-        initial={reduced ? false : { opacity: 0, scale: 0.92 }}
+        initial={false}
         animate={reduced ? undefined : { opacity: 1, scale: 1 }}
         transition={{ duration: 0.45, delay: 0.62 }}
         className="absolute -left-3 top-8 grid h-24 w-24 place-items-center rounded-full border border-white/35 bg-[#087bea] text-center text-[10px] font-extrabold uppercase leading-4 tracking-[.13em] text-white sm:-left-8 sm:h-28 sm:w-28"
